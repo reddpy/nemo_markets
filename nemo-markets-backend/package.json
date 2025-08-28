@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "@fastify/cors": "^8.4.2",
+    "@prisma/client": "^5.5.2",
+    "fastify": "^4.24.3",
+    "fastify-disablecache": "^3.1.7",
+    "nodemon": "^3.0.1",
+    "pg": "^8.11.3"
+  },
+  "name": "nemo-markets-backend",
+  "description": "backend for nemo markets",
+  "version": "1.0.0",
+  "main": "server.ts",
+  "scripts": {
+    "start": "nodemon ./app/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-db-dev": "sudo npx prisma migrate dev",
+    "open-prisma-studio": "sudo npx prisma studio",
+    "seed": "ts-node prisma/seed-data/seed.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reddpy/nemo-markets-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reddpy/nemo-markets-backend/issues"
+  },
+  "homepage": "https://github.com/reddpy/nemo-markets-backend#readme",
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "@types/pg": "^8.10.9",
+    "prisma": "^5.5.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
